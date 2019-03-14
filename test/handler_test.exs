@@ -193,16 +193,16 @@ defmodule HandlerTest do
       Content-Type: application/json\r
       Content-Length: 605\r
       \r
-      [{"type":"Brown","name":"Teddy","id":1,"hibernating":true},
-       {"type":"Black","name":"Smokey","id":2,"hibernating":false},
-       {"type":"Brown","name":"Paddington","id":3,"hibernating":false},
-       {"type":"Grizzly","name":"Scarface","id":4,"hibernating":true},
-       {"type":"Polar","name":"Snow","id":5,"hibernating":false},
-       {"type":"Grizzly","name":"Brutus","id":6,"hibernating":false},
-       {"type":"Black","name":"Rosie","id":7,"hibernating":true},
-       {"type":"Panda","name":"Roscoe","id":8,"hibernating":false},
-       {"type":"Polar","name":"Iceman","id":9,"hibernating":true},
-       {"type":"Grizzly","name":"Kenai","id":10,"hibernating":false}]
+      [{"hibernating":true,"id":1,"name":"Teddy","type":"Brown"},
+       {"hibernating":false,"id":2,"name":"Smokey","type":"Black"},
+       {"hibernating":false,"id":3,"name":"Paddington","type":"Brown"},
+       {"hibernating":true,"id":4,"name":"Scarface","type":"Grizzly"},
+       {"hibernating":false,"id":5,"name":"Snow","type":"Polar"},
+       {"hibernating":false,"id":6,"name":"Brutus","type":"Grizzly"},
+       {"hibernating":true,"id":7,"name":"Rosie","type":"Black"},
+       {"hibernating":false,"id":8,"name":"Roscoe","type":"Panda"},
+       {"hibernating":true,"id":9,"name":"Iceman","type":"Polar"},
+       {"hibernating":false,"id":10,"name":"Kenai","type":"Grizzly"}]
       """
 
       assert remove_whitespace(response) == remove_whitespace(expected_response)
